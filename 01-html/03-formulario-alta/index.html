@@ -8,7 +8,86 @@
   <body>
     <main>
       <h1>Crear cuenta</h1>
-      <!-- Construye aquí el formulario. -->
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <div>
+            <label for="nombre-completo">Nombre completo</label>
+            <input type="text" id="nombre-completo" name="nombre-completo" required/>
+          </div>
+          <div>
+            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" min="1950-01-01" required
+            />
+          </div>
+
+          <div>
+            <label for="pais">País</label>
+            <select id="pais" name="pais" required>
+              <option value="">Selecciona un país</option>
+              <option value="es">España</option>
+              <option value="fr">Francia</option>
+              <option value="it">Italia</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Credenciales de acceso</legend>
+
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" minlength="8" required/>
+            <p id="password-ayuda">
+              Mínimo 8 caracteres
+            </p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencia de contacto</legend>
+
+          <div>
+            <input type="radio" id="contacto-email" name="preferencia-contacto" value="email" required />
+            <label for="contacto-email">Correo electrónico</label>
+          </div>
+
+          <div>
+            <input type="radio" id="contacto-telefono" name="preferencia-contacto" value="telefono" />
+            <label for="contacto-telefono">Teléfono</label>
+          </div>
+
+          <div>
+            <input type="radio" id="contacto-whatsapp" name="preferencia-contacto" value="whatsapp" />
+            <label for="contacto-whatsapp">WhatsApp</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Información adicional</legend>
+
+          <div>
+            <label for="comentarios">Comentarios (opcional)</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <div>
+          <input type="checkbox" id="aceptar-terminos" name="aceptar-terminos" required />
+          <label for="aceptar-terminos">
+            Acepto los términos y condiciones
+          </label>
+        </div>
+
+        <button type="submit">Crear cuenta</button>
+      </form>
     </main>
   </body>
 </html>
